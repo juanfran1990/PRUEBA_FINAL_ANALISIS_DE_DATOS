@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LIBROS DE TERROR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            text-align: center;
+        }
+
+        span {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span><h1>Búsqueda del libro</h1></span>
+        <form method="post">
+            <input type="text" name="search" placeholder="Introduce tu búsqueda...">
+            <input type="submit" value="Buscar">
+        </form>
+        <h2>Resultados de la búsqueda para '{{ query }}':</h2>
+
+        <ul>
+            {% for result in results %}
+                <li>{{ result.info_books }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
